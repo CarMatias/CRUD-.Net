@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f1a8ea38-22d1-4e0a-822b-d98431c45d41": {
+      "ProjectGuid": "f1a8ea38-22d1-4e0a-822b-d98431c45d41",
+      "DisplayName": "SociosWeb",
+      "ColorIndex": 0
+    },
+    "8ddde1d4-6345-405c-bf72-6796b3bafba3": {
+      "ProjectGuid": "8ddde1d4-6345-405c-bf72-6796b3bafba3",
+      "DisplayName": "SociosWeb.DATA",
+      "ColorIndex": 1
+    },
+    "41f7a4d0-d657-438b-bdc0-2abfcaa94935": {
+      "ProjectGuid": "41f7a4d0-d657-438b-bdc0-2abfcaa94935",
+      "DisplayName": "SociosWeb.MODEL",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 3
+}

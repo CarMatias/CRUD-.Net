@@ -1,0 +1,68 @@
+﻿---Script BD PostgreSQL---
+
+...Base de Datos
+
+-- Database: SociosDB
+
+-- DROP DATABASE IF EXISTS "SociosDB";
+
+CREATE DATABASE "SociosDB"
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'Spanish_Argentina.1252'
+    LC_CTYPE = 'Spanish_Argentina.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+
+...Tablas
+
+-- Table: public.Cuotas
+
+-- DROP TABLE IF EXISTS public."Cuotas";
+
+CREATE TABLE IF NOT EXISTS public."Cuotas"
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 999999 CACHE 1 ),
+    monto double precision,
+    mes text COLLATE pg_catalog."default",
+    nrosocio integer,
+    pago boolean,
+    CONSTRAINT "Cuotas_pkey" PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Cuotas"
+    OWNER to postgres;
+
+
+
+-- Table: public.Socios
+
+-- DROP TABLE IF EXISTS public."Socios";
+
+CREATE TABLE IF NOT EXISTS public."Socios"
+(
+    nombre text COLLATE pg_catalog."default",
+    apellido text COLLATE pg_catalog."default",
+    nrosocio integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 999999 CACHE 1 ),
+    direccion text COLLATE pg_catalog."default",
+    telefono integer,
+    foto text COLLATE pg_catalog."default",
+    dni integer,
+    CONSTRAINT "Socios_pkey" PRIMARY KEY (nrosocio)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Socios"
+    OWNER to postgres;
+
+
+---------------
+
+Port=5432
+Database=SociosDB
+User Id=postgres
+Password=12345
